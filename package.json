@@ -1,0 +1,24 @@
+{
+  "name": "playwithzeppelinos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aabdulwahed/playWithZeppelinOS.git"
+  },
+  "author": "Ahmed Ali <ahmed@oceanprotocol.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aabdulwahed/playWithZeppelinOS/issues"
+  },
+  "homepage": "https://github.com/aabdulwahed/playWithZeppelinOS#readme",
+  "dependencies": {
+    "openzeppelin-eth": "^2.1.3",
+    "zos": "^2.2.2",
+    "zos-lib": "^2.2.2"
+  }
+}
