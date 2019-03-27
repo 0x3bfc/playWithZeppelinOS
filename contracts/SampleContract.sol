@@ -19,4 +19,12 @@ contract SampleContract is Ownable {
   {
       samples.create(msg.sender, true);
   }
+
+  function getSender()
+    public
+    view
+    returns(address)
+  {
+    return samples.getSender();
+  }
 }

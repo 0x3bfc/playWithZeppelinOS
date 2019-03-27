@@ -25,9 +25,6 @@ library SampleLib {
         view
         returns(address)
     {
-        if(_self.sender != address(0))
-            return address(this);
-        // added bug here!
-        return address(this);
+        return _self.sender;
     }
 }
