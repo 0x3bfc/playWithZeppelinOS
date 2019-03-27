@@ -43,20 +43,20 @@
       "type": "function"
     }
   ],
-  "bytecode": "0x610239610030600b82828239805160001a6073146000811461002057610022565bfe5b5030600052607381538281f3fe7300000000000000000000000000000000000000003014608060405260043610610063576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680637c00897c1461006857806391b5800c146100d6575b600080fd5b6100946004803603602081101561007e57600080fd5b810190808035906020019092919050505061013d565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b8180156100e257600080fd5b5061013b600480360360608110156100f957600080fd5b8101908080359060200190929190803573ffffffffffffffffffffffffffffffffffffffff1690602001909291908035151590602001909291905050506101a9565b005b60008073ffffffffffffffffffffffffffffffffffffffff168260000160019054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff161415156101a0573090506101a4565b3090505b919050565b808360000160006101000a81548160ff021916908315150217905550818360000160016101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050505056fea165627a7a72305820838ad4a0ed6444dfdcc8e3d475e10f9974f64b207b163bbff460c73de10c20980029",
-  "deployedBytecode": "0x7300000000000000000000000000000000000000003014608060405260043610610063576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680637c00897c1461006857806391b5800c146100d6575b600080fd5b6100946004803603602081101561007e57600080fd5b810190808035906020019092919050505061013d565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b8180156100e257600080fd5b5061013b600480360360608110156100f957600080fd5b8101908080359060200190929190803573ffffffffffffffffffffffffffffffffffffffff1690602001909291908035151590602001909291905050506101a9565b005b60008073ffffffffffffffffffffffffffffffffffffffff168260000160019054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff161415156101a0573090506101a4565b3090505b919050565b808360000160006101000a81548160ff021916908315150217905550818360000160016101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050505056fea165627a7a72305820838ad4a0ed6444dfdcc8e3d475e10f9974f64b207b163bbff460c73de10c20980029",
-  "sourceMap": "24:556:1:-;;132:2:-1;166:7;155:9;146:7;137:37;252:7;246:14;243:1;238:23;232:4;229:33;270:1;265:20;;;;222:63;;265:20;274:9;222:63;;298:9;295:1;288:20;328:4;319:7;311:22;352:7;343;336:24",
-  "deployedSourceMap": "24:556:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;323:255;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;323:255:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;125:192;;8:9:-1;5:2;;;30:1;27;20:12;5:2;125:192:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;125:192:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;323:255;428:7;478:1;454:26;;:5;:12;;;;;;;;;;;;:26;;;;451:63;;;509:4;494:20;;;;451:63;566:4;551:20;;323:255;;;;:::o;125:192::-;272:6;258:5;:11;;;:20;;;;;;;;;;;;;;;;;;303:7;288:5;:12;;;:22;;;;;;;;;;;;;;;;;;125:192;;;:::o",
-  "source": "pragma solidity 0.5.0;\n\nlibrary SampleLib {\n\n    struct SampleStruct{\n        bool state;\n        address sender;\n    }\n\n    function create(\n        SampleStruct storage _self,\n        address _sender,\n        bool _state\n    )\n        public\n    {\n        _self.state = _state;\n        _self.sender = _sender;\n    }\n\n    function getSender(\n        SampleStruct storage _self\n    )\n        public\n        view\n        returns(address)\n    {\n        if(_self.sender != address(0))\n            return address(this);\n        // added bug here!\n        return address(this);\n    }\n}",
+  "bytecode": "0x6101fb610030600b82828239805160001a6073146000811461002057610022565bfe5b5030600052607381538281f3fe7300000000000000000000000000000000000000003014608060405260043610610063576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680637c00897c1461006857806391b5800c146100d6575b600080fd5b6100946004803603602081101561007e57600080fd5b810190808035906020019092919050505061013d565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b8180156100e257600080fd5b5061013b600480360360608110156100f957600080fd5b8101908080359060200190929190803573ffffffffffffffffffffffffffffffffffffffff16906020019092919080351515906020019092919050505061016b565b005b60008160000160019054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050919050565b808360000160006101000a81548160ff021916908315150217905550818360000160016101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050505056fea165627a7a72305820b380afff20b930d8e134b5e5ee662570628d4e32b7a9ffe153663fad6cf8a2660029",
+  "deployedBytecode": "0x7300000000000000000000000000000000000000003014608060405260043610610063576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680637c00897c1461006857806391b5800c146100d6575b600080fd5b6100946004803603602081101561007e57600080fd5b810190808035906020019092919050505061013d565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b8180156100e257600080fd5b5061013b600480360360608110156100f957600080fd5b8101908080359060200190929190803573ffffffffffffffffffffffffffffffffffffffff16906020019092919080351515906020019092919050505061016b565b005b60008160000160019054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050919050565b808360000160006101000a81548160ff021916908315150217905550818360000160016101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050505056fea165627a7a72305820b380afff20b930d8e134b5e5ee662570628d4e32b7a9ffe153663fad6cf8a2660029",
+  "sourceMap": "24:455:1:-;;132:2:-1;166:7;155:9;146:7;137:37;252:7;246:14;243:1;238:23;232:4;229:33;270:1;265:20;;;;222:63;;265:20;274:9;222:63;;298:9;295:1;288:20;328:4;319:7;311:22;352:7;343;336:24",
+  "deployedSourceMap": "24:455:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;323:154;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;323:154:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;125:192;;8:9:-1;5:2;;;30:1;27;20:12;5:2;125:192:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;125:192:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;323:154;428:7;458:5;:12;;;;;;;;;;;;451:19;;323:154;;;:::o;125:192::-;272:6;258:5;:11;;;:20;;;;;;;;;;;;;;;;;;303:7;288:5;:12;;;:22;;;;;;;;;;;;;;;;;;125:192;;;:::o",
+  "source": "pragma solidity 0.5.0;\n\nlibrary SampleLib {\n\n    struct SampleStruct{\n        bool state;\n        address sender;\n    }\n\n    function create(\n        SampleStruct storage _self,\n        address _sender,\n        bool _state\n    )\n        public\n    {\n        _self.state = _state;\n        _self.sender = _sender;\n    }\n\n    function getSender(\n        SampleStruct storage _self\n    )\n        public\n        view\n        returns(address)\n    {\n        return _self.sender;\n    }\n}",
   "sourcePath": "/Users/ahmed/Desktop/code/playWithZos/playWithZeppelinOS/contracts/SampleLib.sol",
   "ast": {
     "absolutePath": "/Users/ahmed/Desktop/code/playWithZos/playWithZeppelinOS/contracts/SampleLib.sol",
     "exportedSymbols": {
       "SampleLib": [
-        100
+        88
       ]
     },
-    "id": 101,
+    "id": 89,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -75,9 +75,9 @@
         "contractKind": "library",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 100,
+        "id": 88,
         "linearizedBaseContracts": [
-          100
+          88
         ],
         "name": "SampleLib",
         "nodeType": "ContractDefinition",
@@ -142,7 +142,7 @@
             ],
             "name": "SampleStruct",
             "nodeType": "StructDefinition",
-            "scope": 100,
+            "scope": 88,
             "src": "49:70:1",
             "visibility": "public"
           },
@@ -379,7 +379,7 @@
               "parameters": [],
               "src": "248:0:1"
             },
-            "scope": 100,
+            "scope": 88,
             "src": "125:192:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -387,238 +387,49 @@
           },
           {
             "body": {
-              "id": 98,
+              "id": 86,
               "nodeType": "Block",
-              "src": "441:137:1",
+              "src": "441:36:1",
               "statements": [
-                {
-                  "condition": {
-                    "argumentTypes": null,
-                    "commonType": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    },
-                    "id": 88,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "leftExpression": {
-                      "argumentTypes": null,
-                      "expression": {
-                        "argumentTypes": null,
-                        "id": 83,
-                        "name": "_self",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 78,
-                        "src": "454:5:1",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_SampleStruct_$54_storage_ptr",
-                          "typeString": "struct SampleLib.SampleStruct storage pointer"
-                        }
-                      },
-                      "id": 84,
-                      "isConstant": false,
-                      "isLValue": true,
-                      "isPure": false,
-                      "lValueRequested": false,
-                      "memberName": "sender",
-                      "nodeType": "MemberAccess",
-                      "referencedDeclaration": 53,
-                      "src": "454:12:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_address",
-                        "typeString": "address"
-                      }
-                    },
-                    "nodeType": "BinaryOperation",
-                    "operator": "!=",
-                    "rightExpression": {
-                      "argumentTypes": null,
-                      "arguments": [
-                        {
-                          "argumentTypes": null,
-                          "hexValue": "30",
-                          "id": 86,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": true,
-                          "kind": "number",
-                          "lValueRequested": false,
-                          "nodeType": "Literal",
-                          "src": "478:1:1",
-                          "subdenomination": null,
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_rational_0_by_1",
-                            "typeString": "int_const 0"
-                          },
-                          "value": "0"
-                        }
-                      ],
-                      "expression": {
-                        "argumentTypes": [
-                          {
-                            "typeIdentifier": "t_rational_0_by_1",
-                            "typeString": "int_const 0"
-                          }
-                        ],
-                        "id": 85,
-                        "isConstant": false,
-                        "isLValue": false,
-                        "isPure": true,
-                        "lValueRequested": false,
-                        "nodeType": "ElementaryTypeNameExpression",
-                        "src": "470:7:1",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_address_$",
-                          "typeString": "type(address)"
-                        },
-                        "typeName": "address"
-                      },
-                      "id": 87,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": true,
-                      "kind": "typeConversion",
-                      "lValueRequested": false,
-                      "names": [],
-                      "nodeType": "FunctionCall",
-                      "src": "470:10:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_address_payable",
-                        "typeString": "address payable"
-                      }
-                    },
-                    "src": "454:26:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_bool",
-                      "typeString": "bool"
-                    }
-                  },
-                  "falseBody": null,
-                  "id": 93,
-                  "nodeType": "IfStatement",
-                  "src": "451:63:1",
-                  "trueBody": {
-                    "expression": {
-                      "argumentTypes": null,
-                      "arguments": [
-                        {
-                          "argumentTypes": null,
-                          "id": 90,
-                          "name": "this",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 319,
-                          "src": "509:4:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_SampleLib_$100",
-                            "typeString": "library SampleLib"
-                          }
-                        }
-                      ],
-                      "expression": {
-                        "argumentTypes": [
-                          {
-                            "typeIdentifier": "t_contract$_SampleLib_$100",
-                            "typeString": "library SampleLib"
-                          }
-                        ],
-                        "id": 89,
-                        "isConstant": false,
-                        "isLValue": false,
-                        "isPure": true,
-                        "lValueRequested": false,
-                        "nodeType": "ElementaryTypeNameExpression",
-                        "src": "501:7:1",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_address_$",
-                          "typeString": "type(address)"
-                        },
-                        "typeName": "address"
-                      },
-                      "id": 91,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": false,
-                      "kind": "typeConversion",
-                      "lValueRequested": false,
-                      "names": [],
-                      "nodeType": "FunctionCall",
-                      "src": "501:13:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_address",
-                        "typeString": "address"
-                      }
-                    },
-                    "functionReturnParameters": 82,
-                    "id": 92,
-                    "nodeType": "Return",
-                    "src": "494:20:1"
-                  }
-                },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "arguments": [
-                      {
-                        "argumentTypes": null,
-                        "id": 95,
-                        "name": "this",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 319,
-                        "src": "566:4:1",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_SampleLib_$100",
-                          "typeString": "library SampleLib"
-                        }
-                      }
-                    ],
                     "expression": {
-                      "argumentTypes": [
-                        {
-                          "typeIdentifier": "t_contract$_SampleLib_$100",
-                          "typeString": "library SampleLib"
-                        }
-                      ],
-                      "id": 94,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": true,
-                      "lValueRequested": false,
-                      "nodeType": "ElementaryTypeNameExpression",
-                      "src": "558:7:1",
+                      "argumentTypes": null,
+                      "id": 83,
+                      "name": "_self",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 78,
+                      "src": "458:5:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_type$_t_address_$",
-                        "typeString": "type(address)"
-                      },
-                      "typeName": "address"
+                        "typeIdentifier": "t_struct$_SampleStruct_$54_storage_ptr",
+                        "typeString": "struct SampleLib.SampleStruct storage pointer"
+                      }
                     },
-                    "id": 96,
+                    "id": 84,
                     "isConstant": false,
-                    "isLValue": false,
+                    "isLValue": true,
                     "isPure": false,
-                    "kind": "typeConversion",
                     "lValueRequested": false,
-                    "names": [],
-                    "nodeType": "FunctionCall",
-                    "src": "558:13:1",
+                    "memberName": "sender",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 53,
+                    "src": "458:12:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
                   "functionReturnParameters": 82,
-                  "id": 97,
+                  "id": 85,
                   "nodeType": "Return",
-                  "src": "551:20:1"
+                  "src": "451:19:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 99,
+            "id": 87,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -633,7 +444,7 @@
                   "id": 78,
                   "name": "_self",
                   "nodeType": "VariableDeclaration",
-                  "scope": 99,
+                  "scope": 87,
                   "src": "351:26:1",
                   "stateVariable": false,
                   "storageLocation": "storage",
@@ -668,7 +479,7 @@
                   "id": 81,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 99,
+                  "scope": 87,
                   "src": "428:7:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -693,27 +504,27 @@
               ],
               "src": "427:9:1"
             },
-            "scope": 100,
-            "src": "323:255:1",
+            "scope": 88,
+            "src": "323:154:1",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 101,
-        "src": "24:556:1"
+        "scope": 89,
+        "src": "24:455:1"
       }
     ],
-    "src": "0:580:1"
+    "src": "0:479:1"
   },
   "legacyAST": {
     "absolutePath": "/Users/ahmed/Desktop/code/playWithZos/playWithZeppelinOS/contracts/SampleLib.sol",
     "exportedSymbols": {
       "SampleLib": [
-        100
+        88
       ]
     },
-    "id": 101,
+    "id": 89,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -732,9 +543,9 @@
         "contractKind": "library",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 100,
+        "id": 88,
         "linearizedBaseContracts": [
-          100
+          88
         ],
         "name": "SampleLib",
         "nodeType": "ContractDefinition",
@@ -799,7 +610,7 @@
             ],
             "name": "SampleStruct",
             "nodeType": "StructDefinition",
-            "scope": 100,
+            "scope": 88,
             "src": "49:70:1",
             "visibility": "public"
           },
@@ -1036,7 +847,7 @@
               "parameters": [],
               "src": "248:0:1"
             },
-            "scope": 100,
+            "scope": 88,
             "src": "125:192:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1044,238 +855,49 @@
           },
           {
             "body": {
-              "id": 98,
+              "id": 86,
               "nodeType": "Block",
-              "src": "441:137:1",
+              "src": "441:36:1",
               "statements": [
-                {
-                  "condition": {
-                    "argumentTypes": null,
-                    "commonType": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    },
-                    "id": 88,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "leftExpression": {
-                      "argumentTypes": null,
-                      "expression": {
-                        "argumentTypes": null,
-                        "id": 83,
-                        "name": "_self",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 78,
-                        "src": "454:5:1",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_SampleStruct_$54_storage_ptr",
-                          "typeString": "struct SampleLib.SampleStruct storage pointer"
-                        }
-                      },
-                      "id": 84,
-                      "isConstant": false,
-                      "isLValue": true,
-                      "isPure": false,
-                      "lValueRequested": false,
-                      "memberName": "sender",
-                      "nodeType": "MemberAccess",
-                      "referencedDeclaration": 53,
-                      "src": "454:12:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_address",
-                        "typeString": "address"
-                      }
-                    },
-                    "nodeType": "BinaryOperation",
-                    "operator": "!=",
-                    "rightExpression": {
-                      "argumentTypes": null,
-                      "arguments": [
-                        {
-                          "argumentTypes": null,
-                          "hexValue": "30",
-                          "id": 86,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": true,
-                          "kind": "number",
-                          "lValueRequested": false,
-                          "nodeType": "Literal",
-                          "src": "478:1:1",
-                          "subdenomination": null,
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_rational_0_by_1",
-                            "typeString": "int_const 0"
-                          },
-                          "value": "0"
-                        }
-                      ],
-                      "expression": {
-                        "argumentTypes": [
-                          {
-                            "typeIdentifier": "t_rational_0_by_1",
-                            "typeString": "int_const 0"
-                          }
-                        ],
-                        "id": 85,
-                        "isConstant": false,
-                        "isLValue": false,
-                        "isPure": true,
-                        "lValueRequested": false,
-                        "nodeType": "ElementaryTypeNameExpression",
-                        "src": "470:7:1",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_address_$",
-                          "typeString": "type(address)"
-                        },
-                        "typeName": "address"
-                      },
-                      "id": 87,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": true,
-                      "kind": "typeConversion",
-                      "lValueRequested": false,
-                      "names": [],
-                      "nodeType": "FunctionCall",
-                      "src": "470:10:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_address_payable",
-                        "typeString": "address payable"
-                      }
-                    },
-                    "src": "454:26:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_bool",
-                      "typeString": "bool"
-                    }
-                  },
-                  "falseBody": null,
-                  "id": 93,
-                  "nodeType": "IfStatement",
-                  "src": "451:63:1",
-                  "trueBody": {
-                    "expression": {
-                      "argumentTypes": null,
-                      "arguments": [
-                        {
-                          "argumentTypes": null,
-                          "id": 90,
-                          "name": "this",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 319,
-                          "src": "509:4:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_SampleLib_$100",
-                            "typeString": "library SampleLib"
-                          }
-                        }
-                      ],
-                      "expression": {
-                        "argumentTypes": [
-                          {
-                            "typeIdentifier": "t_contract$_SampleLib_$100",
-                            "typeString": "library SampleLib"
-                          }
-                        ],
-                        "id": 89,
-                        "isConstant": false,
-                        "isLValue": false,
-                        "isPure": true,
-                        "lValueRequested": false,
-                        "nodeType": "ElementaryTypeNameExpression",
-                        "src": "501:7:1",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_address_$",
-                          "typeString": "type(address)"
-                        },
-                        "typeName": "address"
-                      },
-                      "id": 91,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": false,
-                      "kind": "typeConversion",
-                      "lValueRequested": false,
-                      "names": [],
-                      "nodeType": "FunctionCall",
-                      "src": "501:13:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_address",
-                        "typeString": "address"
-                      }
-                    },
-                    "functionReturnParameters": 82,
-                    "id": 92,
-                    "nodeType": "Return",
-                    "src": "494:20:1"
-                  }
-                },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "arguments": [
-                      {
-                        "argumentTypes": null,
-                        "id": 95,
-                        "name": "this",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 319,
-                        "src": "566:4:1",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_SampleLib_$100",
-                          "typeString": "library SampleLib"
-                        }
-                      }
-                    ],
                     "expression": {
-                      "argumentTypes": [
-                        {
-                          "typeIdentifier": "t_contract$_SampleLib_$100",
-                          "typeString": "library SampleLib"
-                        }
-                      ],
-                      "id": 94,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": true,
-                      "lValueRequested": false,
-                      "nodeType": "ElementaryTypeNameExpression",
-                      "src": "558:7:1",
+                      "argumentTypes": null,
+                      "id": 83,
+                      "name": "_self",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 78,
+                      "src": "458:5:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_type$_t_address_$",
-                        "typeString": "type(address)"
-                      },
-                      "typeName": "address"
+                        "typeIdentifier": "t_struct$_SampleStruct_$54_storage_ptr",
+                        "typeString": "struct SampleLib.SampleStruct storage pointer"
+                      }
                     },
-                    "id": 96,
+                    "id": 84,
                     "isConstant": false,
-                    "isLValue": false,
+                    "isLValue": true,
                     "isPure": false,
-                    "kind": "typeConversion",
                     "lValueRequested": false,
-                    "names": [],
-                    "nodeType": "FunctionCall",
-                    "src": "558:13:1",
+                    "memberName": "sender",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 53,
+                    "src": "458:12:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
                   "functionReturnParameters": 82,
-                  "id": 97,
+                  "id": 85,
                   "nodeType": "Return",
-                  "src": "551:20:1"
+                  "src": "451:19:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 99,
+            "id": 87,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -1290,7 +912,7 @@
                   "id": 78,
                   "name": "_self",
                   "nodeType": "VariableDeclaration",
-                  "scope": 99,
+                  "scope": 87,
                   "src": "351:26:1",
                   "stateVariable": false,
                   "storageLocation": "storage",
@@ -1325,7 +947,7 @@
                   "id": 81,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 99,
+                  "scope": 87,
                   "src": "428:7:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1350,18 +972,18 @@
               ],
               "src": "427:9:1"
             },
-            "scope": 100,
-            "src": "323:255:1",
+            "scope": 88,
+            "src": "323:154:1",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 101,
-        "src": "24:556:1"
+        "scope": 89,
+        "src": "24:455:1"
       }
     ],
-    "src": "0:580:1"
+    "src": "0:479:1"
   },
   "compiler": {
     "name": "solc",
@@ -1369,7 +991,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.2",
-  "updatedAt": "2019-03-27T13:44:24.305Z",
+  "updatedAt": "2019-03-27T22:06:00.290Z",
   "devdoc": {
     "methods": {}
   },

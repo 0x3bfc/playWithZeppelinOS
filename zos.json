@@ -1,6 +1,6 @@
 {
   "zosversion": "2.2",
-  "name": "playWithZeppelinOS",
+  "name": "PlayWithZoS",
   "version": "0.1.0",
   "contracts": {
     "SampleContract": "SampleContract"
