@@ -155,6 +155,8 @@ Finally, let's update the already deployed contract with the new code:
 7. create new instance from the contract through its proxy
 8. call the upgraded function 
 
+
+# Full flow
 Check out the log Below:
 
 ```bash
